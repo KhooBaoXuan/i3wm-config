@@ -90,7 +90,7 @@ min_width=CPU: 100.00%
 
 [load_average]
 interval=1
-label=
+label=
 
 # Battery indicator
 #
