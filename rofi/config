@@ -1,8 +1,8 @@
 # rofi.theme: /usr/share/rofi/themes/purple.rasi
 
-! ------------------------------------------------------------------------------
-! ROFI Color theme
-! ------------------------------------------------------------------------------
+# ! ------------------------------------------------------------------------------
+# ! ROFI Color theme
+# ! ------------------------------------------------------------------------------
 rofi.color-enabled: true
 #		   			Window	  	  Border	 	 Separator
 rofi.color-window: argb:B0435e75, argb:D0435e75, argb:D0435e75
@@ -14,6 +14,5 @@ rofi.color-urgent: argb:00435e75, argb:D0b9524e, argb:00486883, argb:A02C3E4F, a
 
 
 
-
-rofi.font: MonacoB 14
+rofi.font: MonacoB 12
 rofi.hide-scrollbar: true
