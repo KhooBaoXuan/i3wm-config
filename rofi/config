@@ -16,3 +16,9 @@ rofi.color-urgent: argb:00435e75, argb:D0b9524e, argb:00486883, argb:A02C3E4F, a
 
 rofi.font: MonacoB 12
 rofi.hide-scrollbar: true
+
+# Dark theme.
+rofi.theme: ~/.cache/wal/colors-rofi-dark.rasi
+
+# Light theme.
+rofi.theme: ~/.cache/wal/colors-rofi-light.rasi
