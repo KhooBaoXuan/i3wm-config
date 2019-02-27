@@ -4,5 +4,6 @@
 !/polybar/
 !/rofi/
 !/ranger/
+/ranger/history
 !/.vimrc
 !.gitignore
