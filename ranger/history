@@ -1,7 +1,0 @@
-rm ranger-1.9.2
-shell rm ranger-1.9.2
-shell rm -r ~/Downloads/ranger-1.9.2
-
-open_with sqlitebrowser
-shell gio list trash://
-shell gio list trash
