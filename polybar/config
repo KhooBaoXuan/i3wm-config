@@ -204,11 +204,11 @@ format-disconnected-background = ${colors.background-unf}
 ;label-disconnected = %ifname% disconnected
 label-disconnected-foreground = ${colors.foreground-alt}
 
-ramp-signal-0 = "    0%"
-ramp-signal-1 = "    25%"
-ramp-signal-2 = "    50%"
-ramp-signal-3 = "    75%"
-ramp-signal-4 = "    100%"
+ramp-signal-0 = "   0%"
+ramp-signal-1 = "   25%"
+ramp-signal-2 = "   50%"
+ramp-signal-3 = "   75%"
+ramp-signal-4 = "   100%"
 ramp-signal-foreground = ${colors.foreground-alt}
 
 
@@ -248,8 +248,9 @@ label = %date% %time%
 
 [module/volume]
 type = internal/pulseaudio
-;type = internal/alsa
 sink = alsa_output.pci-0000_00_1f.3.analog-stereo
+use-ui-max = true
+interval = 10
 
 ; Soundcard to be used
 ; Usually in the format hw:#
@@ -283,9 +284,7 @@ format-muted-background = ${colors.background-unf}
 format-volume-background = ${colors.background-alt}
 format-volume = "   <ramp-volume>  <label-volume>  "
 format-volume-prefix = " "
-label-muted = "   mute   "
-
-;label-muted = "          "
+label-muted = "     "
 
 ; Only applies if <ramp-volume> is used
 ramp-volume-0 = 
