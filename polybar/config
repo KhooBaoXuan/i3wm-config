@@ -198,7 +198,7 @@ format-connected = "   <ramp-signal> <label-connected>  "
 format-connected-underline = #9f78e1
 label-connected =
 
-format-disconnected = " no wifi :( "
+format-disconnected = " no-wifi "
 format-disconnected-background = ${colors.background-unf}
 ;format-disconnected-underline = ${self.format-connected-underline}
 ;label-disconnected = %ifname% disconnected
@@ -296,18 +296,17 @@ battery = BAT0
 adapter = AC
 full-at = 97
 
-format-full-background = ${colors.background-mod2}
 format-charging-background = ${colors.background-mod1}
-format-charging = "⁣   <animation-charging> <label-charging>"
+format-charging = "⁣  <animation-charging> <label-charging>"
+format-charging-suffix = "  "
 format-charging-underline = #ffb52a
-
-format-charging-suffix = "   "
 
 format-discharging-background = ${colors.background-alt}
 format-discharging = "⁣  <ramp-capacity> <label-discharging>  "
 format-discharging-underline = ${self.format-charging-underline}
 
 format-full = 
+format-full-background = ${colors.background-mod2}
 format-full-prefix-foreground = ${colors.foreground-alt}
 format-full-underline = ${self.format-charging-underline}
 
