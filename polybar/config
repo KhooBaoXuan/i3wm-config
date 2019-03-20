@@ -55,24 +55,22 @@ font-5 = Font Awesome 5 Brands:pixelsize=8;1
 
 
 # Modules arrangement in the bar
-modules-left = i3 music
+modules-left = i3 
 modules-center = date 
-modules-right = wireless-network volume battery powermenu
+modules-right = volume battery powermenu
 
 
 dim-value = 1.0
 
-tray-position = none
+tray-position = right 
 tray-padding = 11
 tray-transparent = true
-tray-offset-y = 22
 tray-offset-x = -0
-tray-maxsize = 18
-tray-detached = true 
-;tray-background = #0063ff
+;tray-maxsize = 18
+tray-detached = false
+;tray-background = ${colors.background-alt} 
 
 wm-restack = i3
-
 ;override-redirect = true
 
 ;scroll-up = bspwm-desknext
@@ -190,6 +188,7 @@ label-urgent-padding = 4
 type = internal/network
 interface = wlp3s0f0
 interval = 3.0
+click-left = nm-connection-editor
 
 format-connected-prefix = " "
 
@@ -240,7 +239,7 @@ time = "   %a %b %d     %I:%M %p  "
 time-alt = %H:%M:%S
 
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #0a6cf5
+;format-underline = #0a6cf5
 
 label = %date% %time%
 
