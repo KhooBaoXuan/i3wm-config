@@ -213,7 +213,7 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 # set desktop background (Wallpaper)
-exec_always feh --bg-scale /home/baoxuan9616/Pictures/khai-sze-ong-308080-unsplash.jpg
+exec_always --no-startup-id feh --bg-scale /home/baoxuan9616/Pictures/khai-sze-ong-308080-unsplash.jpg
 
 # touchpad natural scrolling
 exec --no-startup-id synclient NaturalScrolling=1 VertScrollDelta=-113
@@ -230,8 +230,8 @@ assign [class="Code"] $workspace2
 for_window [class="Spotify"] move to workspace $workspace10
 
 # change Caps Lock to Esc
-exec_always xmodmap -e "clear lock" #disable caps lock switch
-exec_always xmodmap -e "keysym Caps_Lock = Escape" #set caps_lock as escape
+exec_always --no-startup-id xmodmap -e "clear lock" #disable caps lock switch
+exec_always --no-startup-id xmodmap -e "keysym Caps_Lock = Escape" #set caps_lock as escape
 
 # auto startup application
 exec --no-startup-id sudo tlp start
