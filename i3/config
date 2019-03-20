@@ -77,8 +77,8 @@ bindsym $mod+a focus parent
 # open file manager -> nautilus
 bindsym Mod4+e exec nautilus
 
-set $workspace1 "1: Chrome "
-set $workspace2 "2: Development "
+set $workspace1 "1: "
+set $workspace2 "2: "
 set $workspace3 "3"
 set $workspace4 "4"
 set $workspace5 "5"
@@ -86,7 +86,7 @@ set $workspace6 "6"
 set $workspace7 "7"
 set $workspace8 "8"
 set $workspace9 "9"
-set $workspace10 "10: Music "
+set $workspace10 "10: "
 
 # switch to workspace
 bindsym $mod+1 workspace $workspace1
@@ -200,8 +200,8 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute s
 # Sreen brightness controls
 # bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 # bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
-bindsym XF86MonBrightnessUp exec sudo light -A 10 #increase screen bightness
-bindsym XF86MonBrightnessDown exec sudo light -U 5 #decrease screen brightness
+bindsym XF86MonBrightnessUp exec --no-startup-id sudo light -A 10 #increase screen bightness
+bindsym XF86MonBrightnessDown exec --no-startup-id sudo light -U 5 #decrease screen brightness
 
 # Touchpad controls
 #bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
@@ -229,6 +229,9 @@ assign [class="Google-chrome"] $workspace1
 assign [class="Code"] $workspace2
 for_window [class="Spotify"] move to workspace $workspace10
 
-# Change Caps Lock to Esc
+# change Caps Lock to Esc
 exec_always xmodmap -e "clear lock" #disable caps lock switch
 exec_always xmodmap -e "keysym Caps_Lock = Escape" #set caps_lock as escape
+
+# auto startup application
+exec --no-startup-id sudo tlp start
