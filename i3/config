@@ -235,3 +235,4 @@ exec_always --no-startup-id xmodmap -e "keysym Caps_Lock = Escape" #set caps_loc
 
 # auto startup application
 exec --no-startup-id sudo tlp start
+exec --no-startup-id nm-applet
