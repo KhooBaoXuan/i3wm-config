@@ -46,12 +46,12 @@ module-margin-left = 0
 module-margin-right = 0
 
 ;font-0 = Misc Termsyn:size=8;1
-font-0 = SF Mono:style=Medium:size=10;1
+font-0 = SF Mono:style=semibold:size=10;1
 font-1 = FontAwesome:fontformat=truetype:size=12;1
 font-2 = sm4tik:pixelsize=10;1
-font-3 = Font Awesome 5 Free:style=Regular:pixelsize=8;1
-font-4 = Font Awesome 5 Free:style=Solid:pixelsize=8;1
-font-5 = Font Awesome 5 Brands:pixelsize=8;1
+font-3 = Font Awesome 5 Free:style=Regular:pixelsize=9;1
+font-4 = Font Awesome 5 Free:style=Solid:pixelsize=9;1
+font-5 = Font Awesome 5 Brands:pixelsize=9;1
 
 
 # Modules arrangement in the bar
