@@ -57,7 +57,7 @@ font-5 = Font Awesome 5 Brands:pixelsize=8;1
 # Modules arrangement in the bar
 modules-left = i3 
 modules-center = date 
-modules-right = volume battery powermenu
+modules-right = volume battery 
 
 
 dim-value = 1.0
@@ -104,10 +104,10 @@ margin-bottom = 0
 # format-prefix-foreground = ${colors.foreground-alt}
 # exec = python ~/.config/polybar/weather.py
 
-[module/music]
-type = custom/script
-interval = 1
-bar-width = 50%
+# [module/music]
+# type = custom/script
+# interval = 1
+# bar-width = 50%
 
 ;format-background = ${colors.background-alt}
 ;format-foreground = ${colors.foreground-alt}
@@ -278,10 +278,10 @@ headphone-id = 9
 ; Default: false
 mapped = true
 
-format-muted-background = ${colors.background-unf}
-format-volume-background = ${colors.background-alt}
-format-volume = "   <ramp-volume>  <label-volume>  "
-format-volume-prefix = " "
+;format-muted-background = ${colors.background-unf}
+;format-volume-background = ${colors.background-alt}
+format-volume = "   <ramp-volume> <label-volume>  "
+;format-volume-prefix = " "
 label-muted = "     "
 
 ; Only applies if <ramp-volume> is used
@@ -298,9 +298,10 @@ full-at = 97
 format-charging-background = ${colors.background-mod1}
 format-charging = "⁣  <animation-charging> <label-charging>"
 format-charging-suffix = "  "
-format-charging-underline = #ffb52a
+;format-charging-underline = #ffb52a
+format-charging-underline = 
 
-format-discharging-background = ${colors.background-alt}
+;format-discharging-background = ${colors.background-alt}
 format-discharging = "⁣  <ramp-capacity> <label-discharging>  "
 format-discharging-underline = ${self.format-charging-underline}
 
@@ -330,10 +331,10 @@ type = custom/menu
 
 format-spacing = 1
 
-label-open = "      "
-label-open-background = ${colors.background-mod1}
+label-open = "    "
+;label-open-background = ${colors.background-mod1}
 label-open-foreground = ${colors.secondary}
-label-close = "    cancel   "
+label-close = "   cancel  "
 label-close-background = ${colors.background-mod2}
 label-close-foreground = ${colors.secondary}
 label-separator = " "
