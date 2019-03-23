@@ -8,7 +8,8 @@
 
 
 [colors]
-background = #cf172a47
+# background = #cf172a47
+background = #3A3D3F
 ;it's ARGB so "cfl" is for transparency
 background-alt = #cf3C5A46
 background-unf = #cf2E463E
@@ -17,10 +18,15 @@ background-mod1 = #cf546E53
 background-mod2 = #cf708963
 background-alrt = #cfA1BB76
 
-foreground = #F3F3BA
-foreground-alt = #F3F3BA
-primary = #F3F3BA
-secondary = #F3F3BA
+# foreground = #F3F3BA
+# foreground-alt = #F3F3BA
+# primary = #F3F3BA
+# secondary = #F3F3BA
+
+foreground = #D2FF6D
+foreground-alt = #D2FF6D
+primary = #D2FF6D
+secondary = #D2FF6D
 
 
 [bar/PolybarTony]
@@ -53,11 +59,12 @@ font-3 = Font Awesome 5 Free:style=Regular:pixelsize=9;1
 font-4 = Font Awesome 5 Free:style=Solid:pixelsize=9;1
 font-5 = Font Awesome 5 Brands:pixelsize=9;1
 
+enable-ipc = true
 
 # Modules arrangement in the bar
-modules-left = i3 
-modules-center = date 
-modules-right = volume battery 
+modules-left = i3
+modules-center =  
+modules-right = volume battery date
 
 
 dim-value = 1.0
@@ -235,8 +242,9 @@ interval = 5
 date = 
 date-alt = " %Y-%m-%d"
 
-time = "   %a %b %d     %I:%M %p  "
-time-alt = %H:%M:%S
+time = "  %I:%M %p  "
+# time-alt =  %a %b %d %Y 
+time-alt = 
 
 format-prefix-foreground = ${colors.foreground-alt}
 ;format-underline = #0a6cf5
@@ -356,3 +364,12 @@ menu-2-1 = cancel
 menu-2-1-exec = menu-open-0
 
 
+[module/demo]
+type = custom/ipc
+hook-0 = echo foobar
+hook-1 = date +%s
+hook-2 = whoami
+initial = 1
+click-left = polybar-msg -p %pid% hook demo 1
+click-right = polybar-msg -p %pid% hook demo 2
+double-click-left = polybar-msg -p %pid% hook demo 3
