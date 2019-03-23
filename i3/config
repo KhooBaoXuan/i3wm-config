@@ -79,7 +79,7 @@ bindsym Mod4+e exec nautilus
 
 set $workspace1 "1: "
 set $workspace2 "2: "
-set $workspace3 "3"
+set $workspace3 "3: "
 set $workspace4 "4"
 set $workspace5 "5"
 set $workspace6 "6"
@@ -160,9 +160,6 @@ set $inactive-bg-color  #435E75
 set $unfocused_border #72afff
 set $focused_border #82ff80
 
-# window border
-for_window [class="^.*"] border pixel 0
-# gaps inner 10
 
 hide_edge_borders vertical
 
@@ -212,8 +209,15 @@ bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
+# --- Screenshot --- #
+bindsym --release Print exec --no-startup-id shutter -f -o '~/Pictures/Screenshots/%Y-%m-%d_%T.png'
+
+# screenshot with selection
+bindsym --release Shift+Print exec --no-startup-id shutter -s -o '~/Pictures/Screenshots/%Y-%m-%d_%T.png'
+
+
 # set desktop background (Wallpaper)
-exec_always --no-startup-id feh --bg-scale /home/baoxuan9616/Pictures/khai-sze-ong-308080-unsplash.jpg
+exec_always --no-startup-id feh --bg-scale /home/baoxuan9616/Pictures/SF_2560x1440.jpg
 
 # touchpad natural scrolling
 exec --no-startup-id synclient NaturalScrolling=1 VertScrollDelta=-113
@@ -222,6 +226,11 @@ exec --no-startup-id synclient NaturalScrolling=1 VertScrollDelta=-113
 assign [class="Google-chrome"] $workspace1
 assign [class="Code"] $workspace2
 for_window [class="Spotify"] move to workspace $workspace10
+for_window [class="Shutter" instance="shutter"] floating enable
+
+# window border
+for_window [class="^.*"] border pixel 0
+new_window 1pixel
 
 # change Caps Lock to Esc
 exec_always --no-startup-id xmodmap -e "clear lock" #disable caps lock switch
