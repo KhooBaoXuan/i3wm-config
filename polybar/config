@@ -71,13 +71,13 @@ dim-value = 1.0
 
 tray-position = right 
 tray-padding = 11
-tray-transparent = true
+# tray-transparent = true
 tray-offset-x = -0
 ;tray-maxsize = 18
 tray-detached = false
 ;tray-background = ${colors.background-alt} 
 
-wm-restack = i3
+# wm-restack = i3
 ;override-redirect = true
 
 ;scroll-up = bspwm-desknext
