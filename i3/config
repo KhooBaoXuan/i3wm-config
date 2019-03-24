@@ -81,7 +81,7 @@ set $workspace1 "1: "
 set $workspace2 "2: "
 set $workspace3 "3: "
 set $workspace4 "4"
-set $workspace5 "5"
+set $workspace5 "5: "
 set $workspace6 "6"
 set $workspace7 "7"
 set $workspace8 "8"
@@ -217,7 +217,7 @@ bindsym --release Shift+Print exec --no-startup-id shutter -s -o '~/Pictures/Scr
 
 
 # set desktop background (Wallpaper)
-exec_always --no-startup-id feh --bg-scale /home/baoxuan9616/Pictures/SF_2560x1440.jpg
+exec_always --no-startup-id feh --bg-scale wallpapers/nery-montenegro.jpg
 
 # touchpad natural scrolling
 exec --no-startup-id synclient NaturalScrolling=1 VertScrollDelta=-113
