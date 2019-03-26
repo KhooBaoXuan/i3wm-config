@@ -9,3 +9,4 @@
 !.gitignore
 !/dunst/
 !compton.conf
+!/Fonts/
