@@ -14,7 +14,7 @@ rofi.color-urgent: argb:00435e75, argb:D0b9524e, argb:00486883, argb:A02C3E4F, a
 
 
 
-rofi.font: SF Mono Medium 12
+rofi.font: SF Pro Text Semibold 12
 rofi.hide-scrollbar: true
 
 # Dark theme.
