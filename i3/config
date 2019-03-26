@@ -4,7 +4,7 @@ set $mod Mod1
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 #font pango:monospace 8
-font pango:SF Mono Medium 10
+font pango:SF Pro Text Semibold 10
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -217,7 +217,7 @@ bindsym --release Shift+Print exec --no-startup-id shutter -s -o '~/Pictures/Scr
 
 
 # set desktop background (Wallpaper)
-exec_always --no-startup-id feh --bg-scale wallpapers/nery-montenegro.jpg
+exec_always --no-startup-id feh --bg-scale ~/.config/i3/wallpapers/nery-montenegro.jpg
 
 # touchpad natural scrolling
 exec --no-startup-id synclient NaturalScrolling=1 VertScrollDelta=-113
@@ -227,10 +227,13 @@ assign [class="Google-chrome"] $workspace1
 assign [class="Code"] $workspace2
 for_window [class="Spotify"] move to workspace $workspace10
 for_window [class="Shutter" instance="shutter"] floating enable
+# for_window [class="TelegramDesktop"] floating enable
 
 # window border
-for_window [class="^.*"] border pixel 3
+for_window [class="^.*"] border pixel 1
 new_window 1pixel
+gaps inner 10
+gaps outer 5
 
 # change Caps Lock to Esc
 exec_always --no-startup-id xmodmap -e "clear lock" #disable caps lock switch
@@ -238,8 +241,8 @@ exec_always --no-startup-id xmodmap -e "keysym Caps_Lock = Escape" #set caps_loc
 
 # auto startup application
 exec --no-startup-id dropbox start
-exec --no-startup-id compton -f
-exec --no-startup-id dunst
+# exec --no-startup-id compton
+# exec --no-startup-id dunst
 exec --no-startup-id sudo tlp start
 exec --no-startup-id nm-applet > /dev/null 2>&1
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
