@@ -7,3 +7,5 @@
 /ranger/history
 !/.vimrc
 !.gitignore
+!/dunst/
+!compton.conf
