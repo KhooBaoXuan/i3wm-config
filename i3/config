@@ -217,7 +217,8 @@ bindsym --release Shift+Print exec --no-startup-id shutter -s -o '~/Pictures/Scr
 
 
 # set desktop background (Wallpaper)
-exec_always --no-startup-id feh --bg-scale ~/.config/i3/wallpapers/nery-montenegro.jpg
+# exec_always --no-startup-id feh --bg-scale ~/.config/i3/wallpapers/nery-montenegro.jpg
+exec_always --no-startup-id nitrogen --restore
 
 # touchpad natural scrolling
 exec --no-startup-id synclient NaturalScrolling=1 VertScrollDelta=-113
