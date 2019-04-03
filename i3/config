@@ -187,7 +187,8 @@ client.urgent           $base01 $base01 $base05 $base00
 
 # custom keybinding to lock screen
 # bindsym $mod+Ctrl+l exec i3lock -i /home/baoxuan9616/Pictures/MountHazy.png
-bindsym $mod+Ctrl+l exec i3lock-fancy -f Product-Sans-Regular
+# bindsym $mod+Ctrl+l exec i3lock-fancy -f Product-Sans-Regular
+bindsym $mod+Ctrl+l exec i3lock-fancy -f SF-Pro-Text-Medium
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
@@ -224,10 +225,11 @@ exec_always --no-startup-id nitrogen --restore
 exec --no-startup-id synclient NaturalScrolling=1 VertScrollDelta=-113
 
 # default workspace
-assign [class="Google-chrome"] $workspace1
-assign [class="Code"] $workspace2
-for_window [class="Spotify"] move to workspace $workspace10
+# assign [class="Google-chrome"] $workspace1
+# assign [class="Code"] $workspace2
+# for_window [class="Spotify"] move to workspace $workspace10
 for_window [class="Shutter" instance="shutter"] floating enable
+for_window [class="Gnome-terminal"] floating enable
 # for_window [class="TelegramDesktop"] floating enable
 
 # window border
