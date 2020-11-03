@@ -13,3 +13,5 @@
 !.bashrc
 !/phpstorm/
 !/nvim/
+!/.zsh_aliases
+!/.zshrc
