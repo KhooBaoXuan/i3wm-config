@@ -1,1 +1,0 @@
-/home/baoxuan9616/.bashrc
