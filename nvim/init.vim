@@ -14,6 +14,8 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'yuttie/comfortable-motion.vim'
     " Git file changes sign
     Plug 'mhinz/vim-signify'
+    " Use release branch (recommend)
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
     " Golang support
     " Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }    
 
