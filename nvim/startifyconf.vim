@@ -15,12 +15,12 @@ function! s:gitUntracked()
 endfunction
 
 let g:startify_lists = [
+        \ { 'type': function('s:gitModified'),  'header': ['   git modified']},
+        \ { 'type': function('s:gitUntracked'), 'header': ['   git untracked']},
         \ { 'type': 'dir',       'header': ['   MRU '. getcwd()] },
         \ { 'type': 'files',     'header': ['   MRU']            },
         \ { 'type': 'sessions',  'header': ['   Sessions']       },
         \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
-        \ { 'type': function('s:gitModified'),  'header': ['   git modified']},
-        \ { 'type': function('s:gitUntracked'), 'header': ['   git untracked']},
         \ { 'type': 'commands',  'header': ['   Commands']       },
         \ ]
 
@@ -29,5 +29,6 @@ let g:startify_bookmarks = [
       \ '~/Code/mads',
       \ '~/Code/mlpplus',
       \ '~/Code/mcsplus',
+      \ '~/Code/tovels',
       \]
 

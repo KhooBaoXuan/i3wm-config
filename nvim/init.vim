@@ -16,6 +16,12 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'mhinz/vim-signify'
     " Use release branch (recommend)
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    " Palenight color scheme
+    Plug 'drewtempelmeyer/palenight.vim'
+    " Palenight color scheme
+    Plug 'ayu-theme/ayu-vim' 
+    " File searching plugin
+    Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
     " Golang support
     " Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }    
 
@@ -31,7 +37,7 @@ set number		  	            " Line number
 set hlsearch			        " Highlight search result
 set incsearch			        " Display matches for a search pattern while you type.
 set mouse=a	  		            " Enable mouse
-set scrolloff=5 		        " Keep 3 lines below and above the cursor
+set scrolloff=10 		        " Keep 3 lines below and above the cursor
 set nowrap			            " No word wrapping
 set clipboard+=unnamedplus	    " Enable system clipboard
 set splitright			        " Default vertical split to the right
@@ -48,6 +54,8 @@ set expandtab			        " Converts tabs to spaces
 set smartindent			        " Make indenting smart
 set autoindent			        " Make auto indent
 set background=dark		        " Tell vim what background color looks like
+let ayucolor="dark"
+colorscheme ayu
 set showtabline=2		        " Always show tabs
 set ignorecase                  " Case insensitive search
 "set cursorline                  " Set cursorline
@@ -61,15 +69,6 @@ let @q='42gg$r1:q€kbw'
 source $HOME/.config/nvim/keymapping.vim
 
 source $HOME/.config/nvim/startifyconf.vim
-
-
-"let g:startify_lists = [
-"            \ { 'type': 'dir',       'header': ['   MRU '. getcwd()] },
-"            \ { 'type': 'files',     'header': ['   MRU']            },
-"            \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
-"            \ { 'type': 'sessions',  'header': ['   Sessions']       },
-"            \ { 'type': 'commands',  'header': ['   Commands']       },
-"        \]
 
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 
