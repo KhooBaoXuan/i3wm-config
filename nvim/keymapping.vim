@@ -1,3 +1,7 @@
+" set leader key
+"let g:mapleader = "\<Space>"
+let g:mapleader = ";"
+
 " Better window navigation
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
@@ -44,3 +48,10 @@ inoremap <C-_> <Esc>0i# <Esc>
 " Move a single line up/down
 nnoremap <C-Up> ddkP
 nnoremap <C-Down> ddp
+
+" Remap undo & redo
+nnoremap <C-Z> u
+inoremap <C-Z> <C-O>u
+
+" Reload config file
+nnoremap <leader>sc :source ~/.config/nvim/init.vim<CR>

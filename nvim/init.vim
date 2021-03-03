@@ -15,22 +15,21 @@ call plug#begin('~/.config/nvim/plugged')
     " Git file changes sign
     Plug 'mhinz/vim-signify'
     " Use release branch (recommend)
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    "Plug 'neoclide/coc.nvim', {'branch': 'release'}
     " Palenight color scheme
     Plug 'drewtempelmeyer/palenight.vim'
     " Palenight color scheme
     Plug 'ayu-theme/ayu-vim' 
     " File searching plugin
     Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
+    " Plugin to link phpstorm to nvim (https://github.com/beeender/Comrade; https://plugins.jetbrains.com/plugin/12153-comrade-neovim)
+    Plug 'beeender/Comrade'
     " Golang support
-    " Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }    
+    "Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }    
 
 call plug#end()
 
 " General Settings -------------------------------- 
-
-" set leader key
-let g:mapleader = "\<Space>"
 
 syntax enable			        " Enables syntax highlighing
 set number		  	            " Line number
