@@ -16,3 +16,5 @@
 !/.zsh_aliases
 !/.zshrc
 !/kitty/
+!hosts
+!/nginx_sites_laradock/

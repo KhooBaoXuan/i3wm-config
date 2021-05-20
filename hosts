@@ -1,0 +1,58 @@
+127.0.0.1	localhost
+127.0.1.1	ubuntu2004
+
+
+# below are mmp domain
+127.0.0.1	local.mmp2.com
+127.0.0.1	local.mmp3.com
+127.0.0.1	local.mads.com
+127.0.0.1	local.tovels.com
+127.0.0.1	tovels.local
+127.0.0.1	v2.tovels.local
+127.0.0.1	local.marvelmanager.com
+127.0.0.1	sapi.mmp3.com
+
+
+# below are mcsplus domain
+127.0.0.1	local.7me.co
+127.0.0.1	local.g.7me.co
+127.0.0.1	local.ma3.co
+127.0.0.1	local.arabwap.co
+127.0.0.1	local.sportfannews.com
+127.0.0.1	local.portal.cineobox.com
+127.0.0.1	local.moov.cineobox.com
+127.0.0.1	local.moovfun.tovels.com
+127.0.0.1	local.moovgame.7me.co
+#127.0.0.1	local.game.moov-africa.bj
+#127.0.0.1	local.cineobox.moov-africa.bj
+#127.0.0.1	local.fun.moov-africa.bj
+
+
+# below are landingpage domain
+127.0.0.1	local.ilovemobi.com
+127.0.0.1	local.halocell.com
+127.0.0.1	local.cowboy2u.com
+127.0.0.1	local.boobi.biz
+127.0.0.1	local.islandmob.com
+127.0.0.1	local.mobiefun.com
+127.0.0.1	local.fonious.com
+127.0.0.1	local.alphacell.co
+127.0.0.1	local.oyomovie.com
+127.0.0.1	local.bridgemob.com
+127.0.0.1	local.cineobox.com
+127.0.0.1	local.beevod.com
+127.0.0.1 	local.moviday.com
+127.0.0.1	local.oyomovie.com
+127.0.0.1	local.trinitydigi.com
+127.0.0.1	local.msisdn.halocell.com
+127.0.0.1	local.msisdn.mobiefun.com
+127.0.0.1	local.totomobi.com
+127.0.0.1	local.alfrago.com
+
+
+# The following lines are desirable for IPv6 capable hosts
+::1     ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
