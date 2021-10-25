@@ -1,9 +1,10 @@
-alias dup='cd ~/laradock;docker-compose up -d adminer nginx mysql mongo redis beanstalkd php-fpm php-fpm71 workspace memcached redis-webui beanstalkd-console'
+alias dup='cd ~/laradock;docker-compose up -d adminer nginx mysql mongo redis beanstalkd php-fpm php-fpm74 workspace memcached redis-webui beanstalkd-console'
 alias ds='cd ~/laradock;docker-compose stop'
 alias laradockstop='docker-compose stop'
 alias nginxrestart='cd ~/laradock; docker-compose stop nginx; sudo docker-compose build nginx; docker-compose up -d nginx'
 alias pc=changePHPversion
 alias ws='cd ~/laradock;docker-compose exec --user=laradock workspace bash'
+alias ws7='cd ~/laradock;docker-compose exec --user=laradock workspace74 bash'
 alias r='kquitapp5 plasmashell && kstart plasmashell >/dev/null 2>&1 &'
 alias v=nvim
 alias vim=nvim
@@ -21,7 +22,7 @@ alias mmp3='cd ~/Code/mmp3'
 alias cl='cd ~/laradock'
 alias tv='cd ~/Code/tovels'
 alias laradock='cd ~/laradock'
-alias dps='docker ps --format "table {{.ID}}\t{{.Names}}\t{{.Status}}"'
+alias dps='docker ps --format "table {{.ID}}\t{{.Names}}\t{{.Status}}\t{{.Ports}}"'
 alias dp='docker ps'
 alias swagger='docker run -d -p 808:8080 swaggerapi/swagger-editor'
 alias swappiness='cat /proc/sys/vm/swappiness'
@@ -56,3 +57,5 @@ alias km='nvim ~/.config/nvim/keymapping.vim'
 alias ls='ls --color=tty -t'
 alias klf='kitty list-fonts'
 alias icat="kitty +kitten icat"
+alias wi=warp-cli
+alias uip="docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' laradock_ubuntu-ssh_1"
