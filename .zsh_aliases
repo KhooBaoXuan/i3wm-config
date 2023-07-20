@@ -1,33 +1,19 @@
-alias dup='cd ~/laradock;docker-compose up -d adminer nginx mysql mongo redis beanstalkd php-fpm php-fpm74 workspace memcached redis-webui beanstalkd-console'
-alias ds='cd ~/laradock;docker-compose stop'
-alias laradockstop='docker-compose stop'
-alias nginxrestart='cd ~/laradock; docker-compose stop nginx; sudo docker-compose build nginx; docker-compose up -d nginx'
-alias pc=changePHPversion
-alias ws='cd ~/laradock;docker-compose exec --user=laradock workspace bash'
-alias ws7='cd ~/laradock;docker-compose exec --user=laradock workspace74 bash'
-alias r='kquitapp5 plasmashell && kstart plasmashell >/dev/null 2>&1 &'
 alias v=nvim
 alias vim=nvim
-alias dcy='cd ~/laradock; nvim docker-compose.yml'
+alias va="nvim ~/.zsh_aliases"
+alias za=va
 alias dc='docker-compose'
+alias dup="cd ~/devilbox;docker-compose up -d httpd mysql php php71 redis mongo mailpit"
+alias ww='docker exec -it --user devilbox --workdir /shared/httpd/$(basename "$PWD") devilbox_php_1 bash -l'
+alias ds="cd ~/devilbox;docker-compose stop"
+alias dv="cd ~/devilbox/data/www"
 alias tf='tail -f'
-alias alu='apt list --upgradeable'
 alias vk='nvim ~/.config/nvim/keymapping.vim'
-alias mm='cd ~/Code/baoxuan_staging'
-alias ma='cd ~/Code/mads'
-alias mc='cd ~/Code/mcsplus'
-alias ml='cd ~/Code/mlpplus'
-alias m3='cd ~/Code/mlp3'
-alias mmp3='cd ~/Code/mmp3'
-alias cl='cd ~/laradock'
-alias tv='cd ~/Code/tovels'
-alias laradock='cd ~/laradock'
 alias dps='docker ps --format "table {{.ID}}\t{{.Names}}\t{{.Status}}\t{{.Ports}}"'
 alias dp='docker ps'
 alias swagger='docker run -d -p 808:8080 swaggerapi/swagger-editor'
 alias swappiness='cat /proc/sys/vm/swappiness'
-alias rl='source ~/.zshrc'
-alias redisdm='redis-desktop-manager.rdm &> /dev/null &!'
+alias so='source ~/.zshrc'
 alias -g gp='| grep -i'
 alias -g gsp='git stash && git pull && git stash pop'
 alias zshconfig="st ~/.zshrc"
@@ -57,5 +43,3 @@ alias km='nvim ~/.config/nvim/keymapping.vim'
 alias ls='ls --color=tty -t'
 alias klf='kitty list-fonts'
 alias icat="kitty +kitten icat"
-alias wi=warp-cli
-alias uip="docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' laradock_ubuntu-ssh_1"
