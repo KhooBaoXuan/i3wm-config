@@ -79,7 +79,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git sublime docker docker-compose sudo colorize extract)
+plugins=(git docker-compose sudo dirhistory dnf)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -117,13 +117,7 @@ export EDITOR=vim
 
 ppid () { ps -p ${1:-$$} -o ppid=; }
 
-changePHPversion () {
-    nvim ~/laradock/.env
-    echo 'Restart php-fpm and workspace?'
-    select yn in "Yes" "No"; do
-        case $yn in
-            Yes ) cd ~/laradock;docker-compose stop php-fpm workspace;docker-compose build php-fpm workspace;docker-compose up -d php-fpm workspace;;
-            No ) return 1;;
-        esac
-    done
-}
+/usr/bin/ssh-add /home/baoxuan/.ssh/id_rsa > /dev/null 2>&1
+
+export PATH=$PATH:/home/baoxuan/Documents:/home/baoxuan/flutter/bin
+export PATH=$PATH:/home/baoxuan/Android/Sdk/cmdline-tools/latest/bin
